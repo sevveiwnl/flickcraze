@@ -1,0 +1,74 @@
+.photo-detail-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  gap: 20px;
+}
+
+.detail-image {
+  max-width: 60%;
+  max-height: 80vh;
+  object-fit: contain;
+}
+
+.photo-info {
+  flex: 1;
+}
+
+.photo-actions {
+  margin: 15px 0;
+}
+
+.action-btn {
+  background-color: #0095f6;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.comments-section {
+  margin-top: 20px;
+}
+
+.comments-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.comment-item {
+  margin-bottom: 15px;
+}
+
+.comment-profile-pic {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.comment-form {
+  display: flex;
+  margin-top: 15px;
+}
+
+.comment-form input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #dbdbdb;
+  border-radius: 4px 0 0 4px;
+}
+
+.comment-btn {
+  background-color: #0095f6;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  font-weight: bold;
+}

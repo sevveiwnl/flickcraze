@@ -1,0 +1,122 @@
+.profile-container {
+  max-width: 935px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+.profile-header {
+  display: flex;
+  margin-bottom: 44px;
+}
+
+.profile-picture {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-right: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fafafa;
+  border: 1px solid #dbdbdb;
+}
+
+.profile-info {
+  flex: 1;
+}
+
+.profile-username {
+  font-size: 28px;
+  font-weight: 300;
+  margin-bottom: 12px;
+}
+
+.profile-stats {
+  margin-bottom: 20px;
+}
+
+.stat {
+  font-size: 16px;
+}
+
+.profile-fullname {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.profile-tabs {
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid #dbdbdb;
+  margin-bottom: 20px;
+}
+
+.tab-button {
+  font-size: 12px;
+  font-weight: 600;
+  color: #8e8e8e;
+  background: none;
+  border: none;
+  padding: 15px 0;
+  margin: 0 30px;
+  cursor: pointer;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+}
+
+.tab-button svg {
+  margin-right: 6px;
+}
+
+.tab-button.active {
+  color: #262626;
+  border-top: 1px solid #262626;
+  margin-top: -1px;
+}
+
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.post-item {
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  position: relative;
+}
+
+.post-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.action-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 10px;
+  font-size: 12px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.post-item:hover .action-btn {
+  opacity: 1;
+}
+
+.loading, .error, .not-found, .no-posts {
+  text-align: center;
+  padding: 40px;
+  font-size: 18px;
+  color: #8e8e8e;
+}

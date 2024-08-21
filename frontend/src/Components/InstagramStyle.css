@@ -1,0 +1,68 @@
+.auth-container {
+    max-width: 350px;
+    margin: 60px auto;
+    padding: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background: #ffffff;
+    border: 1px solid #dbdbdb;
+    border-radius: 1px;
+    text-align: center;
+  }
+  
+  .logo h1 {
+    margin-bottom: 30px;
+    font-size: 40px;
+    font-weight: normal;
+  }
+  
+  .auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .form-group {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 9px 0 7px 8px;
+    background: #fafafa;
+    border: 1px solid #dbdbdb;
+    border-radius: 3px;
+    font-size: 12px;
+    box-sizing: border-box;
+  }
+  
+  button[type="submit"] {
+    width: 100%;
+    padding: 5px 9px;
+    background-color: #0095f6;
+    color: white;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .auth-switch {
+    margin-top: 20px;
+    font-size: 14px;
+  }
+  
+  .auth-switch a {
+    color: #0095f6;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  
+  .login-status {
+    color: #ed4956;
+    font-size: 14px;
+    margin-top: 10px;
+  }
