@@ -3,6 +3,7 @@ const cors = require('cors');
 const mysql = require('mysql2');
 const multer = require('multer');
 const path = require('path');
+require('dotenv').config();
 
 const app = express();
 
@@ -11,9 +12,9 @@ app.use(express.json());
 
 // First, connect without specifying a database
 const connection = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: 'YourNewPassword' // Replace with your actual MySQL password
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD
 });
 
 // Configure multer for handling file uploads
@@ -39,7 +40,8 @@ connection.connect(err => {
     console.log('Connected to MySQL successfully');
     
     // Create the new database
-    connection.query('CREATE DATABASE IF NOT EXISTS photoshare_new', (err) => {
+    connection.query(`CREATE DATABASE IF NOT EXISTS ${process.env.DB_NAME}`, (err) => {
+
         if (err) {
             console.error('Error creating database:', err);
             return;
@@ -47,7 +49,7 @@ connection.connect(err => {
         console.log('Database "photoshare_new" ensured');
         
         // Switch to the new database
-        connection.changeUser({database : 'photoshare_new'}, (err) => {
+        connection.changeUser({database: process.env.DB_NAME}, (err) => {
             if (err) {
                 console.error('Error switching to new database:', err);
                 return;
@@ -440,6 +442,8 @@ app.delete('/api/debug/clear-posts', (req, res) => {
       });
     }
   });
+
+  
   
 
 
